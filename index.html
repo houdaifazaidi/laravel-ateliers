@@ -122,6 +122,34 @@
             color: #a0aec0;
             font-size: 0.85rem;
         }
+
+                /* --- Button Group Layout --- */
+        .btn-group {
+            display: flex;
+            gap: 10px; /* Space between buttons */
+            width: 100%;
+        }
+
+        /* Ensure buttons in a group grow to fill space equally */
+        .btn-group .btn-link {
+            flex: 1;
+            white-space: nowrap; /* Prevents text wrapping on small screens */
+            padding: 10px 5px;   /* Slightly tighter padding for dual buttons */
+        }
+
+        /* Secondary Button Style (Outline) */
+        .btn-link.secondary {
+            background-color: transparent;
+            color: #171717;
+            border: 2px solid #171717;
+            transition: all 0.2s;
+        }
+
+        .btn-link.secondary:hover {
+            border-color: var(--laravel-red);
+            color: var(--laravel-red);
+            background-color: transparent;
+        }
     </style>
 </head>
 <body>
@@ -162,11 +190,17 @@
                     <div class="pdf-icon">📄</div>
                     <h2 class="pdf-title">Laravel Atelier 3</h2>
                     <p style="font-size: 0.8rem; color: #718096; margin-bottom: 20px;">
-                       Routing and Views in Laravel.
+                        Routing and Views in Laravel.
                     </p>
                 </div>
-                <a href="https://github.com/houdaifazaidi/Ecomerce" class="btn-link" target="_blank"><i class="fa-brands fa-github"></i> View Repo</a>
-                <a href="https://ecomerce-two-delta.vercel.app/" class="btn-link" target="_blank">View page</a>
+                <div class="btn-group">
+                    <a href="https://github.com/houdaifazaidi/Ecomerce" class="btn-link secondary" target="_blank">
+                        <i class="fa-brands fa-github"></i> Repo
+                    </a>
+                    <a href="https://ecomerce-two-delta.vercel.app/" class="btn-link" target="_blank">
+                        View Page
+                    </a>
+                </div>
             </div>
 
 
